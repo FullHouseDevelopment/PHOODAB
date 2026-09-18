@@ -25,7 +25,7 @@ dotnet build phoodab/backend/Phoodab.sln --configuration Debug --no-restore
 dotnet test phoodab/backend/Phoodab.sln --configuration Debug --no-build --no-restore
 ```
 
-The backend projects consume `Yaref92.Events` from GitHub Packages, so local restore also requires credentials for the `https://nuget.pkg.github.com/yaron-E92/index.json` feed.
+The backend projects consume `FullHouse.Events` from GitHub Packages, so local restore also requires credentials for the `https://nuget.pkg.github.com/FullHouseDevelopment/index.json` feed.
 
 Web:
 
