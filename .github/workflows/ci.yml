@@ -159,7 +159,7 @@ jobs:
       dotnet_version: 10.0.x
       setup_command: |
         dotnet nuget remove source github >/dev/null 2>&1 || true
-        dotnet nuget add source https://nuget.pkg.github.com/yaron-E92/index.json --name github --username github-actions --password "$NUGET_AUTH_TOKEN" --store-password-in-clear-text
+        dotnet nuget add source https://nuget.pkg.github.com/FullHouseDevelopment/index.json --name github --username github-actions --password "$NUGET_AUTH_TOKEN" --store-password-in-clear-text
       restore_command: dotnet restore Phoodab.sln
       build_command: dotnet build Phoodab.sln --configuration Debug --no-restore
       test_command: mkdir -p ../../artifacts/test-results/backend && dotnet test Phoodab.sln --configuration Debug --no-build --no-restore --logger "trx" --results-directory ../../artifacts/test-results/backend
@@ -224,7 +224,7 @@ jobs:
         run: |
           set -euo pipefail
           dotnet nuget remove source github >/dev/null 2>&1 || true
-          dotnet nuget add source https://nuget.pkg.github.com/yaron-E92/index.json \
+          dotnet nuget add source https://nuget.pkg.github.com/FullHouseDevelopment/index.json \
             --name github \
             --username github-actions \
             --password "$NUGET_TOKEN" \
